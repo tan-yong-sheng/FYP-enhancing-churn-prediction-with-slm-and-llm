@@ -1,3 +1,5 @@
+name: sbert-embedding
+
 services:
   sbert-embedding:
     container_name: sbert-embedding-cpu

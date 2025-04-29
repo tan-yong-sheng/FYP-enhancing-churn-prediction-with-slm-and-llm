@@ -1,5 +1,3 @@
-# Reference: https://medium.com/@maheshwar.ramkrushna/best-practices-for-secure-docker-containerization-non-root-user-read-only-volumes-and-resource-d34ed09b1bd3
-
 # Use an official Python runtime as a parent image
 FROM python:3.10-slim
 
@@ -43,7 +41,7 @@ RUN chmod +x /app/entrypoint.sh
 # Ensure onnxruntime (CPU version) is installed
 # Install Python dependencies with NumPy downgraded
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install torch==2.1.2 --extra-index-url https://download.pytorch.org/whl/cpu && \
+    pip install torch --extra-index-url https://download.pytorch.org/whl/cpu && \
     pip install onnxruntime && \
     pip install optimum[onnxruntime] && \
     pip install --no-cache-dir -r requirements.txt
