@@ -1,0 +1,25 @@
+# Data and model directories
+backup/
+data/
+models/
+
+# Environment and Python-related
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+[project]
+name = "fyp-churn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dvc>=3.59.1",
+    "dvc-s3>=3.2.0",
+]
