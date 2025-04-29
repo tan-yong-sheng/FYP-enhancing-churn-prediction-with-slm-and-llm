@@ -1,34 +1,61 @@
+# Reference: https://medium.com/@maheshwar.ramkrushna/best-practices-for-secure-docker-containerization-non-root-user-read-only-volumes-and-resource-d34ed09b1bd3
+
 # Use an official Python runtime as a parent image
 FROM python:3.10-slim
 
+# Add label for image metadata
+LABEL name="sbert-embedding-cpu"
+
+# Create a system group named "user" with the -r flag
+RUN groupadd -r user
+
+# Create a system user named "user" and add it to the "user" group with the -r and -g flags
+RUN useradd -r -g user user
+
+# Set the working directory to /app
+WORKDIR /app
+
 # Set environment variables
+# - PYTHONUNBUFFERED: Prevents Python from buffering stdout/stderr
+# - HF_HOME, SENTENCE_TRANSFORMERS_HOME: Set cache directories inside the container
+# - SBERT_MODEL_NAME, SBERT_DEVICE: Configure the embedding model and device
+# - HOST, PORT, WORKERS: Configure Uvicorn server
 ENV PYTHONUNBUFFERED=1 \
-    # Set HuggingFace cache directory inside the container
     HF_HOME=/app/.cache/huggingface \
-    # Set Sentence Transformers cache directory
     SENTENCE_TRANSFORMERS_HOME=/app/.cache/sentence_transformers \
-    # Set default model (can be overridden at runtime)
     SBERT_MODEL_NAME=all-MiniLM-L6-v2 \
-    # Set default device
     SBERT_DEVICE=cpu \
-    # FastAPI/Uvicorn settings
     HOST=0.0.0.0 \
     PORT=8000 \
-    WORKERS=1 # Adjust based on CPU cores available to the container
-
-# Set the working directory in the container
-WORKDIR /app
+    WORKERS=1
 
 # Install system dependencies if needed (e.g., build-essential for some packages)
 # RUN apt-get update && apt-get install -y --no-install-recommends build-essential && rm -rf /var/lib/apt/lists/*
 
-# Copy the requirements file into the container
+# Copy the requirements file and entrypoint script
 COPY requirements.txt .
+COPY entrypoint.sh .
+
+# Make the entrypoint script executable (still as root)
+RUN chmod +x /app/entrypoint.sh
 
 # Install Python dependencies
 # Ensure onnxruntime (CPU version) is installed
+# Install Python dependencies with NumPy downgraded
 RUN pip install --no-cache-dir --upgrade pip && \
+    pip install torch==2.1.2 --extra-index-url https://download.pytorch.org/whl/cpu && \
+    pip install onnxruntime && \
+    pip install optimum[onnxruntime] && \
     pip install --no-cache-dir -r requirements.txt
+
+# Pre-download the Sentence Transformers model
+RUN python -c "import os; import sentence_transformers; model = sentence_transformers.SentenceTransformer(os.environ['SBERT_MODEL_NAME'], device='cpu', backend='onnx')"
+
+# Change ownership of the working directory to the non-root user
+RUN chown -R user:user /app
+
+# Now switch to the non-root user
+USER user
 
 # Copy the application code into the container
 COPY main.py .
@@ -36,6 +63,5 @@ COPY main.py .
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Define the command to run the application using Uvicorn
-# Use the number of workers defined by the environment variable
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "$WORKERS"]
+# Define the command to run the application
+CMD ["./entrypoint.sh"]

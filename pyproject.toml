@@ -7,4 +7,5 @@ requires-python = ">=3.13"
 dependencies = [
     "dvc>=3.59.1",
     "dvc-s3>=3.2.0",
+    "python-dotenv>=1.1.0",
 ]
