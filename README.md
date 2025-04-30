@@ -1,5 +1,7 @@
 ## FYP - Enhancing Customer Churn Prediction Using Data Mining Approaches, Small Language Model (SLMs), and Large Language Model (LLMs)
 
+Datasets for this project is stored at HuggingFace: [https://huggingface.co/datasets/tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm/tree/main](https://huggingface.co/datasets/tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm/tree/main)
+
 
 ## Synthentic Data Generation
 
