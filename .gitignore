@@ -1,6 +1,8 @@
 # Data and model directories
 data/
+!data/*.dvc
 models/
+tmp/
 
 # Environment and Python-related
 .env
@@ -22,3 +24,5 @@ __pycache__/
 # OS-specific
 .DS_Store
 Thumbs.db
+/data
+/data.zip

@@ -19,7 +19,7 @@ LITELLM_ENDPOINT = os.getenv('LITELLM_BASE_URL') + '/v1/embeddings'
 # IMPORTANT: Replace with your actual token or load from environment variables
 API_KEY = os.getenv('LITELLM_API_KEY')
 MODEL_NAME = "gemini/text-embedding-004"
-INPUT_DIR = "data/synthesis/"
+INPUT_DIR = "data/synthetic_feedback/output"
 OUTPUT_DIR = "data/embeddings/llm_embeddings"
 REQUEST_TIMEOUT = 60 # seconds
 RETRY_DELAY = 5 # seconds

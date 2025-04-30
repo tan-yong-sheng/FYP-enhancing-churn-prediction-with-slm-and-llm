@@ -1,0 +1,6 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://fyp-churn
+    endpointurl = https://3574999ba3c9bbce177b484adb3971b9.r2.cloudflarestorage.com
+    region = auto

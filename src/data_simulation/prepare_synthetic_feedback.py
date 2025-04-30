@@ -14,8 +14,8 @@ _ = load_dotenv(find_dotenv())
 NUM_THREADS = 10
 
 # --- Configuration ---
-RAW_DIR = 'data/raw'
-SYNTHESIS_DIR = 'data/synthesis'
+RAW_DIR = 'data/synthetic_feedback/raw'
+SYNTHESIS_DIR = 'data/synthetic_feedback/output'
 LITELLM_ENDPOINT = os.getenv('LITELLM_BASE_URL') + '/v1/chat/completions'
 API_KEY = os.getenv('LITELLM_API_KEY')
 

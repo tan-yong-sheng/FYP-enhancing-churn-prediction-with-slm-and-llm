@@ -24,19 +24,20 @@ Datasets for this project is stored at HuggingFace: [https://huggingface.co/data
 docker compose -f docker/docker-compose.yml up -d
 ```
 
+## Manage data versioning with dvc and s3-compatible cloud (such as Cloudflare R2)
 
-## Manage datasets to Huggingface (i.e., Upload & Download)
 
-> **Pre-requisites**: Need to add `HF_TOKEN` environment variable to `.env` file. See more here on how to get access token for your Huggingface account: [https://huggingface.co/docs/hub/security-tokens](https://huggingface.co/docs/hub/security-tokens)
+```bash
+dvc add data/csv
 
-- Upload local `data/` folder to my huggingface datasets repo:
-  
-  ```bash
-  python utils/hf_data_sync.py upload --repo-id tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm --local-path data --verbose
-  ```
+dvc remote add -d myremote s3://fyp-churn
+dvc remote modify --local myremote access_key_id 'mysecret'
+dvc remote modify --local myremote secret_access_key 'mysecret'
+dvc remote modify myremote endpointurl 'myendpointurl'
+dvc remote modify myremote region 'auto'
+dvc push
+```
 
-- Download from repo to local `data/` folder:
-  
-  ```bash
-  python utils/hf_data_sync.py download --repo-id tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm --local-path data --verbose
-  ```
+
+- `dvc push`
+

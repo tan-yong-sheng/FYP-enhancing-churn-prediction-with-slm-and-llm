@@ -5,7 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "dvc>=3.59.1",
     "huggingface-hub>=0.30.2",
     "python-dotenv>=1.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "dvc>=3.59.1",
+    "dvc-s3>=3.2.0",
 ]

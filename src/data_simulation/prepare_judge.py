@@ -13,9 +13,9 @@ _ = load_dotenv(find_dotenv())
 NUM_THREADS = 10
 
 # --- Configuration ---
-RAW_DIR = 'data/raw'
-SYNTHESIS_DIR = 'data/synthesis'
-JUDGE_DIR = 'data/llm_judge'
+RAW_DIR = 'data/synthetic_feedback/raw'
+SYNTHESIS_DIR = 'data/synthetic_feedback/output'
+JUDGE_DIR = 'data/synthetic_feedback/llm_judge'
 LITELLM_ENDPOINT = os.getenv('LITELLM_BASE_URL') + '/v1/chat/completions' # Use the same env var as before
 MODEL_NAME = 'xai/grok-3-mini-fast-beta' # Or choose another model suitable for judging
 TEMPERATURE = 0 # Lower temperature might be better for judging consistency
