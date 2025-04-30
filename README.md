@@ -5,20 +5,16 @@
 
 (i) Using LLM to generate synthentic feedback based on original feedback category with only 4 unique values
 
+Models used: `grok-3-mini-beta`
+
 (ii) Using LLM as judge to evaluate synthetic feedback
 
+Models used: `grok-3-fast-beta`
 
 ## Starting Docker services
 
 (i) CPU
 
 ```bash
-docker compose -f docker/docker-compose.cpu.yml up -d
+docker compose -f docker/docker-compose.yml up -d
 ```
-
-(ii) Nvidia GPU
-
-```bash
-docker compose -f docker/docker-compose.cuda.yml up -d
-```
-

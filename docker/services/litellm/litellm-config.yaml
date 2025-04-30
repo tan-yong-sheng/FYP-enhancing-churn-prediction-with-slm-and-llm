@@ -1,0 +1,31 @@
+model_list:
+  - model_name: all-MiniLM-L6-v2
+    litellm_params:
+      model: openai/all-MiniLM-L6-v2
+      api_key: 'sk-1234' # fake api key, as we don't set any password when building this embedding endpoint
+      api_base: http://localhost:8000/v1/embeddings
+
+
+litellm_settings:
+  # structured outputs: https://docs.litellm.ai/docs/completion/json_mode
+  # Reference: https://github.com/BerriAI/litellm/blob/main/litellm/__init__.py
+  enable_json_schema_validation: True
+  drop_params: True
+
+  # increase reliability
+  num_retries: 3 # retry call 3 times on each model_name
+  allowed_fails: 3 # cooldown model if it fails > 1 call in a minute.
+  cooldown_time: 30 # how long to cooldown model if fails/min > allowed_fails
+
+  # caching with redis
+  #cache: True # set cache responses to True, litellm defaults to using a redis cache
+  #cache_params:
+  #  type: redis
+
+
+router_settings:
+  # routing strategy: https://docs.litellm.ai/docs/routing
+  routing_strategy: usage-based-routing-v2
+  redis_host: litellm_redis
+  redis_port: 6379
+  enable_pre_call_check: true

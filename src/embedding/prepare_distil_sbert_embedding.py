@@ -18,9 +18,9 @@ MAX_WORKERS = 20
 LITELLM_ENDPOINT = os.getenv('LITELLM_BASE_URL') + '/v1/embeddings'
 # IMPORTANT: Replace with your actual token or load from environment variables
 API_KEY = os.getenv('LITELLM_API_KEY')
-MODEL_NAME = "gemini/text-embedding-004"
+MODEL_NAME = "potion-base-8m"
 INPUT_DIR = "data/synthesis/"
-OUTPUT_DIR = "data/embeddings/llm_embeddings"
+OUTPUT_DIR = "data/embeddings/distil_sbert_embeddings"
 REQUEST_TIMEOUT = 60 # seconds
 RETRY_DELAY = 5 # seconds
 MAX_RETRIES = 3
