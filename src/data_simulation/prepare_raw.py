@@ -2,8 +2,8 @@ import csv
 import os
 
 # Define input file and output directory
-csv_file_path = 'data/csv/churn.csv'
-output_dir = 'data/synthetic_feedback/raw'
+csv_file_path = 'data/input/churn.csv'
+output_dir = 'tmp/synthetic_feedback/raw'
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)

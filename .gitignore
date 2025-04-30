@@ -1,7 +1,5 @@
 # Data and model directories
-
-data/embeddings/
-data/synthetic_feedback/
+tmp/
 
 # Environment and Python-related
 .env
@@ -23,3 +21,6 @@ __pycache__/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# Appended by dvc
+/data

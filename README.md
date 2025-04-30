@@ -35,7 +35,7 @@ dvc remote modify myremote region 'auto'
 ```
 
 ```bash
-dvc add data/csv
+dvc add data
 dvc push
 ```
 
