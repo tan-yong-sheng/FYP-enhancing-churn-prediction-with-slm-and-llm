@@ -1,9 +1,7 @@
 # Data and model directories
 
-data/embeddings/*
-data/synthentic_feedback/*
-models/
-
+data/embeddings/
+data/synthetic_feedback/
 
 # Environment and Python-related
 .env
@@ -25,5 +23,3 @@ __pycache__/
 # OS-specific
 .DS_Store
 Thumbs.db
-/data
-/data.zip
