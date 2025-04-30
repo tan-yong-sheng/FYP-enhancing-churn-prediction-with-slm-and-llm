@@ -1,8 +1,10 @@
 # Data and model directories
-data/
-!data/*.dvc
+
+data/csv
+data/embeddings
+data/synthentic_feedback
 models/
-tmp/
+
 
 # Environment and Python-related
 .env
