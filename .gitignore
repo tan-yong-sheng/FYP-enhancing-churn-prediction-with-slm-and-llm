@@ -1,8 +1,7 @@
 # Data and model directories
 
-data/csv
-data/embeddings
-data/synthentic_feedback
+data/embeddings/*
+data/synthentic_feedback/*
 models/
 
 
