@@ -1,6 +1,5 @@
 import os
 import requests
-import json
 import time
 import re # Import regex module
 import concurrent.futures
@@ -11,7 +10,7 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 # control the number of thread workers
-NUM_THREADS = 10
+NUM_THREADS = 20
 
 # --- Configuration ---
 RAW_DIR = 'tmp/synthetic_feedback/raw'
@@ -23,7 +22,6 @@ API_KEY = os.getenv('LITELLM_API_KEY')
 MODEL_NAME = 'xai/grok-3-beta' # As per your curl example
 TEMPERATURE = 0.7
 MAX_TOKENS = 300
-
 MAX_RETRIES = 3
 INITIAL_BACKOFF = 1 # seconds
 

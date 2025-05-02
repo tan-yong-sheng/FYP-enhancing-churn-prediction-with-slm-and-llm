@@ -1,3 +1,9 @@
+'''
+This module evaluates the relevance of synthesized customer feedback against original customer data.
+It uses an AI model via the LiteLLM API to judge relevance, processes files in parallel, and saves the results.
+The script assumes the presence of raw and synthesized feedback files and handles errors with retry logic.
+'''
+
 import os
 import requests
 import json

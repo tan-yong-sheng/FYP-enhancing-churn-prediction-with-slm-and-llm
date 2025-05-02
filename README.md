@@ -3,7 +3,15 @@
 Datasets for this project is stored at HuggingFace: [https://huggingface.co/datasets/tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm/tree/main](https://huggingface.co/datasets/tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm/tree/main)
 
 
-## Synthentic Data Generation
+
+## Reproducibility of this Project
+### Starting all necessary Docker services for this project
+
+```bash
+docker compose -f docker/docker-compose.yml up -d
+```
+
+### Synthentic Data Generation
 
 (i) Using LLM to generate synthentic feedback based on original feedback category with only 4 unique values
 
@@ -18,11 +26,11 @@ Datasets for this project is stored at HuggingFace: [https://huggingface.co/data
 - Prompt used: 
 
 
-## Starting all necessary Docker services for this project
+### Embedding
 
-```bash
-docker compose -f docker/docker-compose.yml up -d
-```
+...
+
+
 
 ## Manage data versioning with dvc and s3-compatible cloud (such as Cloudflare R2)
 

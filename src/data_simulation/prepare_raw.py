@@ -1,3 +1,9 @@
+'''
+This script processes a CSV file containing customer data and generates individual text files 
+for each record. It formats the data into a structured XML-like template and handles cases 
+where specific fields are missing or have special values.
+'''
+
 import csv
 import os
 
