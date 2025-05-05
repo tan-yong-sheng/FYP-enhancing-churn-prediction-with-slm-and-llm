@@ -34,6 +34,8 @@ docker compose -f docker/docker-compose.yml up -d
 
 ## Manage data versioning with dvc and s3-compatible cloud (such as Cloudflare R2)
 
+- Initial configuration 
+
 ```bash
 dvc remote add -d myremote s3://fyp-churn
 dvc remote modify --local myremote access_key_id 'mysecret'
@@ -42,8 +44,15 @@ dvc remote modify myremote endpointurl 'myendpointurl'
 dvc remote modify myremote region 'auto'
 ```
 
+- Upload data folder to DVC remote storage:
+
 ```bash
 dvc add data
 dvc push
 ```
 
+- Pull data from DVC remote storage:
+
+```bash
+dvc pull
+```
