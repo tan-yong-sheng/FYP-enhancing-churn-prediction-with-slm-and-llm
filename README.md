@@ -47,3 +47,8 @@ dvc add data
 dvc push
 ```
 
+
+
+## Reference
+- https://freedium.cfd/https://medium.com/data-science/the-stacking-ensemble-method-984f5134463a
+- https://towardsdatascience.com/customer-churn-prediction-with-text-and-interpretability-bd3d57af34b1/
