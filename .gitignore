@@ -1,5 +1,9 @@
+# exclude all csv file
+*.csv
+
 # Data and model directories
 tmp/
+backup/
 
 # Environment and Python-related
 .env
@@ -12,6 +16,7 @@ __pycache__/
 *.egg-info/
 *.egg
 *.log
+*.roo/
 
 # IDE/editor files
 .vscode/
@@ -21,6 +26,3 @@ __pycache__/
 # OS-specific
 .DS_Store
 Thumbs.db
-
-# Appended by dvc
-/data
