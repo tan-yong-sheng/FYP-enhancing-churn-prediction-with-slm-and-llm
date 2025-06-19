@@ -1,6 +1,0 @@
-Notebook naming
-
-1. Single_Model_Churn_Prediction_with_Structured_and_Text_Embeddings.ipynb
-
-2. Ensemble_Churn_Prediction_with_Structured_and_Text_Embeddings.ipynb
-
