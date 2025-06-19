@@ -23,5 +23,6 @@ dependencies = [
     "sentence-transformers>=4.1.0",
     "shap>=0.48.0",
     "typing-extensions==4.14.0",
+    "umap-learn>=0.5.7",
     "xgboost>=3.0.2",
 ]

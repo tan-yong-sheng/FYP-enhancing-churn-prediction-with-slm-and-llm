@@ -15,8 +15,10 @@ docker compose -f docker/docker-compose.yml up -d
 
 (i) Using LLM to generate synthentic feedback based on original feedback category with only 4 unique values
 
+
+
 - Models used: `grok-3-mini-beta`
-- Prompt used: 
+- Prompt used: Check [this notebook](notebook/text-representation/utils/prepare_llm_prompt.py)
 
 
 
@@ -33,3 +35,8 @@ docker compose -f docker/docker-compose.yml up -d
 ----
 
 Reminder: refer to `reference/` folder for more references you've collected to read...
+
+
+### LLM for explainability
+
+Reminder: refer to `reference/` folder for more references you've collected to read... (note: `pycaret` conda environment)
