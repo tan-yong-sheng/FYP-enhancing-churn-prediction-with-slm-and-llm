@@ -1,24 +1,35 @@
 ## FYP - Enhancing Customer Churn Prediction Using Data Mining Approaches, Small Language Model (SLMs), and Large Language Model (LLMs)
 
+Datasets for this project is stored at HuggingFace: [https://huggingface.co/datasets/tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm/tree/main](https://huggingface.co/datasets/tan-yong-sheng/FYP-enhancing-churn-prediction-with-slm-and-llm/tree/main)
+
+
+
+## Reproducibility of this Project
+### Starting all necessary Docker services for this project
+
+```bash
+docker compose -f docker/docker-compose.yml up -d
+```
 
 ### Synthentic Data Generation
 
 (i) Using LLM to generate synthentic feedback based on original feedback category with only 4 unique values
 
+- Models used: `grok-3-mini-beta`
+- Prompt used: 
+
+
+
 (ii) Using LLM as judge to evaluate synthetic feedback
 
+- Models used: `grok-3-fast-beta`
+- Prompt used: 
 
-## Starting Docker services
 
-(i) CPU
+### Embedding
 
-```bash
-docker compose -f docker/docker-compose.cpu.yml up -d
-```
+- Models used: `text-embedding-004` from gemini
 
-(ii) Nvidia GPU
+----
 
-```bash
-docker compose -f docker/docker-compose.cuda.yml up -d
-```
-
+Reminder: refer to `reference/` folder for more references you've collected to read...

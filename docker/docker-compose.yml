@@ -1,0 +1,71 @@
+name: sbert-embedding
+
+services:
+  # Setting up LiteLLM proxy to unify LLM API call
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    ports:
+      - "4000:4000" # Map the container port to the host, change the host port if necessary
+    volumes:
+      - ./services/litellm/litellm-config.yaml:/app/config.yaml # Mount the local configuration file
+    # You can change the port or number of workers as per your requirements or pass any new supported CLI augument. Make sure the port passed here matches with the container port defined above in `ports` value
+    command: [ "--config", "/app/config.yaml", "--port", "4000", "--num_workers", "8" ]
+    environment:
+      - LITELLM_MASTER_KEY=${LITELLM_MASTER_KEY:-sk-1234}
+      - DATABASE_URL=postgresql://${LITELLM_POSTGRES_USER:-postgres}:${LITELLM_POSTGRES_PASSWORD:-postgres}@${LITELLM_POSTGRES_HOST:-litellm_db}:${LITELLM_POSTGRES_PORT:-5432}/${LITELLM_POSTGRES_DATABASE:-postgres}
+      - STORE_MODEL_IN_DB=True # allows adding models to proxy via UI
+      - UI_USERNAME=${LITELLM_UI_USERNAME:-admin}
+      - UI_PASSWORD=${LITELLM_UI_PASSWORD:-admin}
+      # only if you want to use redis for caching
+      - REDIS_HOST=${LITELLM_REDIS_HOST:-litellm_redis}
+      - REDIS_PORT=${LITELLM_REDIS_PORT:-6379}
+    depends_on:
+      - litellm_db
+      - litellm_redis
+    networks:
+      - internal
+
+
+  litellm_db:
+    image: postgres:16.1
+    container_name: litellm_db
+    #restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${LITELLM_POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${LITELLM_POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_PORT=${LITELLM_POSTGRES_PORT:-5432}
+      - POSTGRES_DATABASE=${LITELLM_POSTGRES_DATABASE:-postgres}
+      - POSTGRES_HOST=${LITELLM_POSTGRES_HOST:-litellm_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+
+  litellm_redis:
+    image: redis/redis-stack:latest
+    container_name: litellm_redis
+    #restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/root/redis
+      # - ./services/litellm/redis.conf:/usr/local/etc/redis/redis.conf
+    environment:
+      - REDIS_HOST=${LITELLM_REDIS_HOST:-litellm_redis}
+      - REDIS_PORT=${LITELLM_REDIS_PORT:-6379}
+      - REDIS_SSL=True
+    networks:
+      - internal
+
+
+volumes:
+  sbert_cache:
+  postgres_data:
+  redis_data:
+
+
+networks:
+  internal:
