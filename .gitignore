@@ -1,9 +1,10 @@
 # exclude all csv file
 *.csv
 
-# Data and model directories
+# Some folder directories to be excluded
 tmp/
 backup/
+reference/
 
 # Environment and Python-related
 .env
@@ -17,12 +18,3 @@ __pycache__/
 *.egg
 *.log
 *.roo/
-
-# IDE/editor files
-.vscode/
-.idea/
-*.swp
-
-# OS-specific
-.DS_Store
-Thumbs.db
