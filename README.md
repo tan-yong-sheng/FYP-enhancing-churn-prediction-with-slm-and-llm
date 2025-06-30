@@ -1,3 +1,6 @@
+- Reference: Churn prediction using multimodality of text and tabular features with Amazon SageMaker Jumpstart https://aws.amazon.com/blogs/machine-learning/churn-prediction-using-multimodality-of-text-and-tabular-features-with-amazon-sagemaker-jumpstart/
+
+
 ## FYP - Enhancing Customer Churn Prediction Using Data Mining Approaches, Small Language Model (SLMs), and Large Language Model (LLMs)
 
 ### Synthentic Data Generation
