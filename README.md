@@ -1,3 +1,6 @@
+(Remember to exclude shap.pkl to rerun again... although it takes hours to run...)
+
+
 - Reference: Churn prediction using multimodality of text and tabular features with Amazon SageMaker Jumpstart https://aws.amazon.com/blogs/machine-learning/churn-prediction-using-multimodality-of-text-and-tabular-features-with-amazon-sagemaker-jumpstart/
 
 
