@@ -104,6 +104,7 @@ dependencies:
       - jupyter-server-terminals==0.5.3
       - jupyterlab-pygments==0.3.0
       - jupyterlab-widgets==1.1.11
+      - krippendorff==0.8.1
       - langchain==0.1.4
       - langchain-community==0.0.20
       - langchain-core==0.1.23
