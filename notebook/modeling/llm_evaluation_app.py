@@ -154,13 +154,19 @@ if CSV_PATH is None:
 
 app = LLMEvaluationApp(CSV_PATH)
 
+def count_words(text):
+    """Count words in text"""
+    if not text or text == 'N/A':
+        return 0
+    return len(text.split())
+
 def update_display():
     """Update the display with current row data"""
     data = app.get_current_row_data()
     progress_info = app.get_progress_info()
     
     if data is None:
-        return "No data available", "", "", "", "", progress_info, "", None, "", None, "", None, ""
+        return "No data available", "", "", "", "", "", progress_info, "", None, "", None, "", None, ""
     
     # Load existing evaluation if available
     existing_eval = ""
@@ -182,9 +188,15 @@ def update_display():
         except:
             pass
     
+    # Count words in explanation
+    explanation_text = data['explanation']
+    word_count = count_words(explanation_text)
+    word_count_display = f"Word Count: {word_count} words"
+    
     return (
         data['predicted_label'],
         data['top_5_shap_values'],
+        word_count_display,
         data['explanation'],
         data['shap_values'],
         data['meta_data_description'],
@@ -269,6 +281,7 @@ with gr.Blocks(title="LLM Narrative Evaluation", theme=gr.themes.Soft()) as demo
     with gr.Tab("Data to Evaluate"):
         predicted_label = gr.Textbox(label="Predicted Label", interactive=False)
         top5_shap = gr.Textbox(label="Top 5 SHAP Values", interactive=False)
+        word_counter = gr.Textbox(label="Explanation Statistics", interactive=False)
         explanation = gr.Textbox(label="🔍 LLM-Generated Explanation (TO EVALUATE)", 
                                 lines=5, interactive=False)
         shap_values = gr.Textbox(label="SHAP Values (Full)", lines=4, interactive=False)
@@ -306,36 +319,36 @@ with gr.Blocks(title="LLM Narrative Evaluation", theme=gr.themes.Soft()) as demo
         submit_evaluation,
         inputs=[factual_score, factual_justification, completeness_score, 
                 completeness_justification, clarity_score, clarity_justification],
-        outputs=[result_text, predicted_label, top5_shap, explanation, shap_values, meta_desc, 
+        outputs=[result_text, predicted_label, top5_shap, word_counter, explanation, shap_values, meta_desc, 
                 progress_text, existing_eval,
                 factual_score, factual_justification, completeness_score, 
                 completeness_justification, clarity_score, clarity_justification]
     )
     
-    next_btn.click(move_next, outputs=[predicted_label, top5_shap, explanation, shap_values, meta_desc, 
+    next_btn.click(move_next, outputs=[predicted_label, top5_shap, word_counter, explanation, shap_values, meta_desc, 
                                       progress_text, existing_eval,
                                       factual_score, factual_justification, completeness_score, 
                                       completeness_justification, clarity_score, clarity_justification])
     
-    prev_btn.click(move_previous, outputs=[predicted_label, top5_shap, explanation, shap_values, meta_desc, 
+    prev_btn.click(move_previous, outputs=[predicted_label, top5_shap, word_counter, explanation, shap_values, meta_desc, 
                                           progress_text, existing_eval,
                                           factual_score, factual_justification, completeness_score, 
                                           completeness_justification, clarity_score, clarity_justification])
     
-    skip_btn.click(skip_unfinished, outputs=[predicted_label, top5_shap, explanation, shap_values, meta_desc, 
+    skip_btn.click(skip_unfinished, outputs=[predicted_label, top5_shap, word_counter, explanation, shap_values, meta_desc, 
                                             progress_text, existing_eval,
                                             factual_score, factual_justification, completeness_score, 
                                             completeness_justification, clarity_score, clarity_justification])
     
     go_to_btn.click(go_to_row, 
                    inputs=[row_number_input],
-                   outputs=[navigation_result, predicted_label, top5_shap, explanation, shap_values, meta_desc, 
+                   outputs=[navigation_result, predicted_label, top5_shap, word_counter, explanation, shap_values, meta_desc, 
                            progress_text, existing_eval,
                            factual_score, factual_justification, completeness_score, 
                            completeness_justification, clarity_score, clarity_justification])
     
     # Load initial data
-    demo.load(update_display, outputs=[predicted_label, top5_shap, explanation, shap_values, meta_desc, 
+    demo.load(update_display, outputs=[predicted_label, top5_shap, word_counter, explanation, shap_values, meta_desc, 
                                       progress_text, existing_eval,
                                       factual_score, factual_justification, completeness_score, 
                                       completeness_justification, clarity_score, clarity_justification])
