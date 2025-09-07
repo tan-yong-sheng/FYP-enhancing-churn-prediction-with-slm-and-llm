@@ -1,6 +1,3 @@
-# exclude all csv file
-*.csv
-
 # Some folder directories to be excluded
 tmp/
 backup/
