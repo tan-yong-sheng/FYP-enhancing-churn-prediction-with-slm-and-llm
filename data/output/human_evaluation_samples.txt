@@ -1,0 +1,599 @@
+SAMPLE 1
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to stay. Their membership category significantly reduces the chance of churn. Additionally, they log in frequently, which also helps retain them. However, factors like age and using special discounts slightly increase the risk of leaving, but overall, they remain a valued customer.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'age': 'moderate', 'used_special_discount_Yes': 'weak', 'internet_option_Wi-Fi': 'weak'}
+
+{'membership_category': -8.527676582336426, 'avg_frequency_login_days': -1.5842729806900024, 'age': 0.4120582640171051, 'used_special_discount_Yes': 0.18287909030914307, 'internet_option_Wi-Fi': 0.1736346036195755}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'used_special_discount_Yes', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'internet_option_Wi-Fi', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 2
+==================================================
+LLM-generated narratives
+==========================
+This customer is likely to churn primarily due to their Membership Category, which significantly impacts their loyalty. Additionally, their low average frequency of logins and transaction value contribute to this risk. Complaints and a minimal points balance also play a role, but to a lesser extent.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'avg_transaction_value': 'strong', 'complaint_status': 'moderate', 'points_in_wallet': 'weak'}
+
+{'membership_category': 2.813594102859497, 'avg_frequency_login_days': 1.8852486610412598, 'avg_transaction_value': 1.116089940071106, 'complaint_status': 0.41579797863960266, 'points_in_wallet': 0.29603180289268494}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'complaint_status', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 3
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly increases churn. Additionally, infrequent logins and less time spent on the platform also contribute to this risk. Conversely, older customers tend to stay longer, highlighting the importance of engagement strategies.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'avg_time_spent': 'moderate', 'avg_transaction_value': 'moderate', 'age': 'moderate'}
+
+{'membership_category': 3.10160756111145, 'avg_frequency_login_days': 1.092517614364624, 'avg_time_spent': 0.5759016275405884, 'avg_transaction_value': 0.43446865677833557, 'age': -0.3246711194515228}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 4
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is unlikely to leave, primarily due to their Membership Category, which significantly reduces churn risk. However, having fewer Points in Wallet and a longer time since joining may slightly increase their likelihood of leaving. Monitoring login frequency and transaction value can also help retain them.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'points_in_wallet': 'moderate', 'years_since_joining': 'weak', 'avg_frequency_login_days': 'weak', 'avg_transaction_value': 'weak'}
+
+{'membership_category': -9.17963695526123, 'points_in_wallet': 0.7744501233100891, 'years_since_joining': 0.22019647061824799, 'avg_frequency_login_days': 0.20118217170238495, 'avg_transaction_value': 0.15422336757183075}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'years_since_joining', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 5
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly increases the risk of churn. Additionally, infrequent logins contribute to this risk. While their preference for offers and days since last login also play a role, having Wi-Fi access slightly reduces churn risk.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'offer_application_preference_Yes': 'weak', 'days_since_last_login': 'weak', 'internet_option_Wi-Fi': 'weak'}
+
+{'membership_category': 2.37990665435791, 'avg_frequency_login_days': 1.2608362436294556, 'offer_application_preference_Yes': 0.28372299671173096, 'days_since_last_login': 0.21227623522281647, 'internet_option_Wi-Fi': -0.20790457725524902}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'offer_application_preference_Yes', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'internet_option_Wi-Fi', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 6
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly increases churn risk. Additionally, their login frequency and age positively influence retention, while the time since their last login and transaction value also play a role in their likelihood to stay.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'moderate', 'age': 'moderate', 'days_since_last_login': 'moderate', 'avg_transaction_value': 'moderate'}
+
+{'membership_category': 4.074056148529053, 'avg_frequency_login_days': -0.5901923775672913, 'age': -0.5481372475624084, 'days_since_last_login': 0.4838058650493622, 'avg_transaction_value': -0.37621769309043884}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 6.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 7
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is likely to stay. Their frequent logins indicate strong engagement, which significantly reduces the risk of churn. Additionally, their membership category supports retention. However, their age and infrequent logins could slightly increase churn risk, while their transaction value has a minimal impact.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'membership_category': 'strong', 'age': 'moderate', 'days_since_last_login': 'moderate', 'avg_transaction_value': 'weak'}
+
+{'avg_frequency_login_days': -4.75685977935791, 'membership_category': -1.9890105724334717, 'age': 0.49438345432281494, 'days_since_last_login': -0.3726210594177246, 'avg_transaction_value': 0.2402811199426651}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 9.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 8
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is unlikely to leave, primarily due to their frequent logins, which strongly indicates engagement. Their membership category also supports retention. However, the absence of preferred offers, time spent on the platform, and days since their last login could slightly increase churn risk.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'membership_category': 'strong', 'preferred_offer_types_Without Offers': 'moderate', 'avg_time_spent': 'weak', 'days_since_last_login': 'weak'}
+
+{'avg_frequency_login_days': -2.3805384635925293, 'membership_category': -1.8968772888183594, 'preferred_offer_types_Without Offers': 0.35959023237228394, 'avg_time_spent': 0.23867644369602203, 'days_since_last_login': 0.22633476555347443}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'preferred_offer_types_Without Offers', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 9
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to churn, primarily due to their Membership Category, which significantly impacts retention. Additionally, their age and preference for offers also contribute to this risk. While their average login frequency and years since joining play a role, they are less influential.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'age': 'moderate', 'offer_application_preference_Yes': 'moderate', 'avg_frequency_login_days': 'weak', 'years_since_joining': 'weak'}
+
+{'membership_category': 4.5294084548950195, 'age': 0.3617088496685028, 'offer_application_preference_Yes': 0.3479181230068207, 'avg_frequency_login_days': 0.29816126823425293, 'years_since_joining': 0.2369900494813919}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'offer_application_preference_Yes', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'years_since_joining', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 10
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to leave, primarily due to their Membership Category, which significantly increases churn risk. Additionally, their average login frequency, age, transaction value, and points in their wallet also contribute to this risk. Addressing these factors could help retain the customer.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'moderate', 'age': 'moderate', 'avg_transaction_value': 'moderate', 'points_in_wallet': 'moderate'}
+
+{'membership_category': 4.498810291290283, 'avg_frequency_login_days': 0.8744916319847107, 'age': 0.32580241560935974, 'avg_transaction_value': 0.3062565326690674, 'points_in_wallet': 0.30353808403015137}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 11
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to churn primarily due to infrequent logins, which is the strongest factor. Additionally, lower transaction values, longer periods since their last login, age, and a lack of preferred offers also contribute to their potential departure. Addressing these areas could help retain them.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'avg_transaction_value': 'moderate', 'days_since_last_login': 'moderate', 'age': 'moderate', 'preferred_offer_types_Without Offers': 'weak'}
+
+{'avg_frequency_login_days': 3.307636260986328, 'avg_transaction_value': 0.621972918510437, 'days_since_last_login': 0.3829708397388458, 'age': 0.34055405855178833, 'preferred_offer_types_Without Offers': 0.26460957527160645}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'preferred_offer_types_Without Offers', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 12
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly influences their likelihood to churn. Additionally, their average login frequency and age also contribute to this risk. Conversely, the time since their last login slightly reduces the chance of churn.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'age': 'moderate', 'avg_transaction_value': 'weak', 'days_since_last_login': 'weak'}
+
+{'membership_category': 2.875760793685913, 'avg_frequency_login_days': 2.475679874420166, 'age': 0.3119135797023773, 'avg_transaction_value': 0.290132611989975, 'days_since_last_login': -0.20609083771705627}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 13
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly influences churn. Additionally, infrequent logins, fewer points in their wallet, and reduced time spent on the platform also contribute to their likelihood of leaving. Addressing these areas could help retain them.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'points_in_wallet': 'strong', 'avg_time_spent': 'moderate', 'days_since_last_login': 'moderate'}
+
+{'membership_category': 2.696877956390381, 'avg_frequency_login_days': 1.6612939834594727, 'points_in_wallet': 1.2372167110443115, 'avg_time_spent': 0.34970250725746155, 'days_since_last_login': 0.32013610005378723}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 14
+==================================================
+LLM-generated narratives
+==========================
+This customer is predicted to stay engaged, primarily due to their Membership Category, which significantly reduces the likelihood of churn. However, their infrequent logins and past complaints may pose risks. Encouraging more frequent interactions and addressing any concerns could further enhance their loyalty.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'points_in_wallet': 'moderate', 'avg_transaction_value': 'moderate', 'past_complaint_Yes': 'weak'}
+
+{'membership_category': -9.337808609008789, 'avg_frequency_login_days': 1.8945651054382324, 'points_in_wallet': 0.37349048256874084, 'avg_transaction_value': 0.3113706111907959, 'past_complaint_Yes': 0.2435838282108307}
+
+{'completeness': {'score': 6.0}, 'faithfulness': {'score': 5.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'avg_transaction_value', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'past_complaint_Yes', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 15
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to churn. The most significant factor is their low average frequency of login days, which strongly suggests disengagement. Additionally, having fewer points in their wallet and a longer time since their last login also contribute to this risk. Addressing these issues could help retain them.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'points_in_wallet': 'moderate', 'membership_category': 'moderate', 'days_since_last_login': 'weak', 'avg_transaction_value': 'weak'}
+
+{'avg_frequency_login_days': 3.5034990310668945, 'points_in_wallet': 0.7054661512374878, 'membership_category': -0.3717789053916931, 'days_since_last_login': 0.292417973279953, 'avg_transaction_value': 0.24948939681053162}
+
+{'completeness': {'score': 6.0}, 'faithfulness': {'score': 5.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'membership_category', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'avg_transaction_value', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 16
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to churn primarily due to infrequent logins, suggesting they may feel disengaged. Additionally, their membership category positively influences retention. Other factors include a long time since their last login, lower transaction values, and a preference for gift vouchers, which also contribute to their risk of leaving.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'membership_category': 'moderate', 'days_since_last_login': 'moderate', 'avg_transaction_value': 'moderate', 'preferred_offer_types_Gift Vouchers/Coupons': 'weak'}
+
+{'avg_frequency_login_days': 1.843376874923706, 'membership_category': -0.9423126578330994, 'days_since_last_login': 0.6599926352500916, 'avg_transaction_value': 0.30234578251838684, 'preferred_offer_types_Gift Vouchers/Coupons': 0.2563478946685791}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'preferred_offer_types_Gift Vouchers/Coupons', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 17
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is unlikely to leave. Their membership category significantly reduces churn risk. Additionally, they log in frequently, which also helps retain them. However, their age and transaction value slightly increase the risk of churn, while their recent login activity positively influences their loyalty.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'age': 'moderate', 'days_since_last_login': 'moderate', 'avg_transaction_value': 'moderate'}
+
+{'membership_category': -8.736164093017578, 'avg_frequency_login_days': -1.761656641960144, 'age': 0.5646292567253113, 'days_since_last_login': -0.3551887273788452, 'avg_transaction_value': 0.32146283984184265}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 18
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is likely to stay. Their membership category significantly reduces the chance of churn, while frequent logins also contribute positively. Although their last login was a while ago and they have a complaint, these factors have a lesser impact. Overall, they appear to be a loyal customer.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'days_since_last_login': 'weak', 'complaint_status': 'weak', 'preferred_offer_types_Without Offers': 'weak'}
+
+{'membership_category': -8.215167045593262, 'avg_frequency_login_days': -2.275829553604126, 'days_since_last_login': -0.28998905420303345, 'complaint_status': 0.27676454186439514, 'preferred_offer_types_Without Offers': -0.17333756387233734}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 7.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': True}, {'feature': 'complaint_status', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'preferred_offer_types_Without Offers', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 19
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to leave. Their membership category is crucial, as it significantly reduces churn. However, factors like points in their wallet, age, login frequency, and days since last login are also concerning, as they contribute to a higher likelihood of leaving.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'points_in_wallet': 'moderate', 'age': 'moderate', 'avg_frequency_login_days': 'moderate', 'days_since_last_login': 'moderate'}
+
+{'membership_category': -1.0553616285324097, 'points_in_wallet': 0.5453051924705505, 'age': 0.4916941523551941, 'avg_frequency_login_days': 0.41595447063446045, 'days_since_last_login': 0.32698243856430054}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 20
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is unlikely to leave. Their membership category plays a crucial role in reducing churn. Additionally, frequent logins further support their loyalty. While having points in their wallet slightly increases the risk of churn, their age and average time spent have minimal impact.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'points_in_wallet': 'moderate', 'age': 'weak', 'avg_time_spent': 'weak'}
+
+{'membership_category': -8.017428398132324, 'avg_frequency_login_days': -3.4031434059143066, 'points_in_wallet': 0.41183769702911377, 'age': 0.23692764341831207, 'avg_time_spent': -0.11943641304969788}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 8.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'minimal impact', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'minimal impact', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': False, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 21
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is unlikely to leave. Their membership category plays a crucial role in reducing churn. Additionally, frequent logins positively impact retention. However, factors like age, time spent on the platform, and being male slightly increase the risk of churn. Overall, the outlook is positive.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'age': 'moderate', 'avg_time_spent': 'moderate', 'gender_M': 'moderate'}
+
+{'membership_category': -8.16226863861084, 'avg_frequency_login_days': -1.4182944297790527, 'age': 0.40929144620895386, 'avg_time_spent': 0.39820075035095215, 'gender_M': 0.33487316966056824}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'gender_M', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 22
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is likely to stay. Their frequent logins are crucial, showing strong engagement. Being in a favorable membership category also helps retain them. While they spend some time on the platform, their age and points in their wallet further support their loyalty.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'very strong', 'membership_category': 'strong', 'avg_time_spent': 'moderate', 'age': 'moderate', 'points_in_wallet': 'weak'}
+
+{'avg_frequency_login_days': -5.006030559539795, 'membership_category': -1.9284709692001343, 'avg_time_spent': 0.5458146929740906, 'age': -0.32097119092941284, 'points_in_wallet': -0.205135777592659}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 9.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 23
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to churn primarily due to infrequent logins, which significantly increases their risk. Additionally, having fewer points in their wallet also contributes to this risk. Conversely, higher transaction values and certain membership categories can help reduce churn, highlighting areas for potential engagement.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'points_in_wallet': 'strong', 'avg_transaction_value': 'moderate', 'region_category_Village': 'moderate', 'membership_category': 'moderate'}
+
+{'avg_frequency_login_days': 3.767286777496338, 'points_in_wallet': 1.0196791887283325, 'avg_transaction_value': -0.6531380414962769, 'region_category_Village': 0.4941621720790863, 'membership_category': -0.36043688654899597}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 7.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'region_category_Village', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 24
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is unlikely to leave. Their membership category plays a crucial role in reducing churn, followed by their average transaction value and login frequency. Additionally, the time spent engaging with our services and the points they have also contribute positively, though to a lesser extent.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_transaction_value': 'strong', 'avg_frequency_login_days': 'strong', 'avg_time_spent': 'moderate', 'points_in_wallet': 'weak'}
+
+{'membership_category': -6.741785526275635, 'avg_transaction_value': -2.8309099674224854, 'avg_frequency_login_days': -1.6539684534072876, 'avg_time_spent': -0.4380529522895813, 'points_in_wallet': -0.29129263758659363}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 25
+==================================================
+LLM-generated narratives
+==========================
+The model predicts this customer is likely to stay. Their membership category is crucial, as it significantly reduces the chance of leaving. However, increased average time spent and days since last login may raise concerns. Additionally, while average transaction value has a minor impact, their age also helps retain them.
+
+Predicted Target variable
+===========================
+predicted_label: 0
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_time_spent': 'moderate', 'days_since_last_login': 'moderate', 'avg_transaction_value': 'weak', 'age': 'weak'}
+
+{'membership_category': -1.1208715438842773, 'avg_time_spent': 0.47350823879241943, 'days_since_last_login': 0.42660796642303467, 'avg_transaction_value': 0.28733566403388977, 'age': -0.2019852101802826}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_time_spent', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 26
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to churn primarily due to their Membership Category, which significantly increases the risk. Additionally, their infrequent login days contribute to this concern. Conversely, higher transaction values and referrals can help reduce churn, highlighting areas for potential improvement in engagement strategies.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'avg_transaction_value': 'moderate', 'points_in_wallet': 'moderate', 'joined_through_referral_Yes': 'weak'}
+
+{'membership_category': 2.6415224075317383, 'avg_frequency_login_days': 1.4531735181808472, 'avg_transaction_value': -0.445223867893219, 'points_in_wallet': 0.40332770347595215, 'joined_through_referral_Yes': -0.24413126707077026}
+
+{'completeness': {'score': 8.0}, 'faithfulness': {'score': 7.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'joined_through_referral_Yes', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 27
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to churn primarily due to their low average frequency of login days, which significantly impacts their engagement. Additionally, their membership category positively influences retention, while factors like days since last login, age, and years since joining also contribute to the risk of churn.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'avg_frequency_login_days': 'strong', 'membership_category': 'moderate', 'days_since_last_login': 'weak', 'age': 'weak', 'years_since_joining': 'weak'}
+
+{'avg_frequency_login_days': 2.9350759983062744, 'membership_category': -0.31134217977523804, 'days_since_last_login': 0.28415724635124207, 'age': 0.243995800614357, 'years_since_joining': 0.21086624264717102}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 7.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}, {'feature': 'years_since_joining', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'weak', 'sign_agreement': True, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 28
+==================================================
+LLM-generated narratives
+==========================
+The model indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly increases the risk of churn. Additionally, their average login frequency helps reduce churn, while higher transaction values, age, and complaint status also contribute to the likelihood of leaving.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'very strong', 'avg_frequency_login_days': 'strong', 'avg_transaction_value': 'moderate', 'age': 'moderate', 'complaint_status': 'moderate'}
+
+{'membership_category': 6.0260396003723145, 'avg_frequency_login_days': -1.6650457382202148, 'avg_transaction_value': 0.6868937611579895, 'age': 0.41721510887145996, 'complaint_status': 0.3682117462158203}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'very strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'away from churn', 'direction_shap': 'away from churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'age', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'complaint_status', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
+
+SAMPLE 29
+==================================================
+LLM-generated narratives
+==========================
+The prediction indicates this customer is likely to leave. The most significant factor is their Membership Category, which strongly increases churn risk. Additionally, infrequent logins and the number of years since joining also contribute to this risk. Encouraging engagement and offering tailored promotions could help retain them.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'years_since_joining': 'moderate', 'days_since_last_login': 'moderate', 'offer_application_preference_Yes': 'moderate'}
+
+{'membership_category': 2.327080488204956, 'avg_frequency_login_days': 1.3671579360961914, 'years_since_joining': 0.3832537829875946, 'days_since_last_login': 0.375287264585495, 'offer_application_preference_Yes': -0.3556843101978302}
+
+{'completeness': {'score': 6.0}, 'faithfulness': {'score': 6.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'years_since_joining', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'days_since_last_login', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}, {'feature': 'offer_application_preference_Yes', 'feature_mentioned': False, 'direction_text': 'not mentioned', 'direction_shap': 'away from churn', 'magnitude_shap': 'moderate', 'sign_agreement': False, 'rank_agreement': False}]}
+
+====================================================================================================
+
+SAMPLE 30
+==================================================
+LLM-generated narratives
+==========================
+This customer is likely to churn primarily due to their Membership Category, which significantly impacts their loyalty. Additionally, infrequent logins and lower transaction values contribute to their disengagement. Limited preferred offers and fewer points in their wallet also play a role in their decision to leave.
+
+Predicted Target variable
+===========================
+predicted_label: 1
+
+LLM-generated scoring to evaluate narratives
+================================================
+{'membership_category': 'strong', 'avg_frequency_login_days': 'strong', 'avg_transaction_value': 'moderate', 'preferred_offer_types_Without Offers': 'moderate', 'points_in_wallet': 'moderate'}
+
+{'membership_category': 3.2734198570251465, 'avg_frequency_login_days': 1.4712496995925903, 'avg_transaction_value': 0.4909074902534485, 'preferred_offer_types_Without Offers': 0.458890825510025, 'points_in_wallet': 0.4211975336074829}
+
+{'completeness': {'score': 10.0}, 'faithfulness': {'score': 10.0, 'details': 'Calculated by validation function'}, 'raw_features': [{'feature': 'membership_category', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_frequency_login_days', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'strong', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'avg_transaction_value', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'preferred_offer_types_Without Offers', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}, {'feature': 'points_in_wallet', 'feature_mentioned': True, 'direction_text': 'towards churn', 'direction_shap': 'towards churn', 'magnitude_shap': 'moderate', 'sign_agreement': True, 'rank_agreement': True}]}
+
+====================================================================================================
